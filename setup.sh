@@ -9,23 +9,6 @@
 
   echo "🤖 Setting up FLL Robot Framework..."
 
-  # Check if Homebrew is installed
-  if ! command -v brew &> /dev/null; then
-      echo "📦 Installing Homebrew..."
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-      # Add Homebrew to PATH for this session
-      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-      eval "$(/opt/homebrew/bin/brew shellenv)"
-  fi
-
-  # Check for git (from Xcode or system)
-  if command -v git &> /dev/null; then
-      echo "✅ Git already installed ($(git --version))"
-  else
-      echo "📦 Installing Git via Homebrew..."
-      brew install git
-  fi
 
   # Configure local git user.name for this repository
   if [ -d .git ]; then
@@ -35,10 +18,6 @@
   else
       echo "⚠️  Not a git repository (no .git directory). Skipping git config."
   fi
-
-  # Install Python 3.13
-  echo "🐍 Ensuring Python 3.13 is installed..."
-  brew install python@3.13
 
 # Check if the virtual environment exists, if not, create it
 if [ ! -d ".venv" ]; then
