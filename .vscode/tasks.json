@@ -84,23 +84,6 @@
             }
         },
         {
-            "label": "git pull on startup",
-            "type": "shell",
-            "command": "${command:python.interpreterPath}",
-            "args": [
-                "${workspaceFolder}/.vscode/gitpull.py"
-            ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "new",
-                "focus": true
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
-            },
-            "problemMatcher": []
-        },
-        {
             "label": "Run on alt robot",
             "type": "shell",
             "command": "${command:python.interpreterPath}",
