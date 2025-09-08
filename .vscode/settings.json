@@ -1,0 +1,19 @@
+{
+      "files.exclude": {
+    //       "**/.git": true,
+          "**/.DS_Store": true,
+          "**/.venv/": true,
+          "**/__pycache__/": true,
+          "**/.gitignore": true,
+    //       "**/setup.sh": true,
+    //       "**/README.md": true,
+    //       "base_robot.py": true,
+          "utils.py": true
+      },
+      "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+      },
+      "python.defaultInterpreterPath": "./venv/bin/python",
+      "editor.rulers": [80]
+  }
