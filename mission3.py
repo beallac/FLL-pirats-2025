@@ -9,10 +9,13 @@ from base_robot import *
 # 1. Make sure the robot is properly aligned at the starting position
 # 2. Run this script from the master program or execute it directly
 
+br = None
 
-# When we run this program from the master program, we will call this
-# "Run(br)" method.
-def Run(br: BaseRobot):
+
+def run(base_robot):
+    global br
+    br = base_robot
+
     # Step 1: Go forward 55.5 mm
     br.driveForDistance(distance=555, speedPct=80, then=Stop.BRAKE, waiting=True)
 
@@ -28,4 +31,4 @@ def Run(br: BaseRobot):
 
 if __name__ == "__main__":
     br = BaseRobot()
-    Run(br)
+    run(br)

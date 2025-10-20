@@ -1,9 +1,9 @@
-#  __  __ _____ _   _ _   _   ____      _  _____ 
+#  __  __ _____ _   _ _   _   ____      _  _____
 # |  \/  | ____| \ | | | | | |  _ \    / \|_   _|
-# | |\/| |  _| |  \| | | | | | |_) |  / _ \ | |  
-# | |  | | |___| |\  | |_| | |  _ <  / ___ \| |  
-# |_|  |_|_____|_| \_|\___/  |_| \_\/_/   \_\_|  
-                                               
+# | |\/| |  _| |  \| | | | | | |_) |  / _ \ | |
+# | |  | | |___| |\  | |_| | |  _ <  / ___ \| |
+# |_|  |_|_____|_| \_|\___/  |_| \_\/_/   \_\_|
+
 # To implement, follow this guide:
 #
 # 1 - Set `br` (your robot instance) to None at the top of your mission file:
@@ -15,7 +15,7 @@
 #           br = base_robot  # Links the passed-in robot to br
 #
 #     Place all your mission code inside this `run` function.
-# 
+#
 # 3 - Add the following code at the end of your file so you can test the mission on its own:
 #       if __name__ == "__main__":
 #           br = BaseRobot()  # Create a robot instance to test with
@@ -37,31 +37,22 @@ from pybricks.parameters import Side, Button
 # Initialize the robot
 br = BaseRobot()
 
-import west_scooby
-import west_placescooby
-import west_krakhead_modded
-import boat
-import crab_traps
-import east_sqid
-import radar_sub_anglerfish
-import umugus
-import coral_flowers
+import mission1_2
+import mission12
+import mission3
 
 # Dictionary linking menu options to the run functions of each mission
 menu_options = {
-    "1": west_scooby.run,
-    "2": west_placescooby.run,
-    "3": west_krakhead_modded.run,
-    "4": boat.run,
-    "5": crab_traps.run,
-    "6": east_sqid.run,
-    "7": radar_sub_anglerfish.run,
-    "8": umugus.run,
-    "9": coral_flowers.run
+    "3": mission1_2.run,
+    "4": mission12.run,
+    "5": mission3.run,
 }
 
 import umath
+
 watch = StopWatch()
+
+
 def pirat_hub_menu(*menu_items):
     br.hub.display.orientation(up=Side.RIGHT)
     # leftLight = ColorSensor(Port.B)
@@ -104,14 +95,13 @@ def pirat_hub_menu(*menu_items):
 # while True:
 # Display menu and select an option
 # selected = hub_menu('1', '2', '3', '4', '5', '6', '7')
-selected = pirat_hub_menu('1', '2', '3', '4', '5', '6', '7', '8', '9')
+selected = pirat_hub_menu("1", "2", "3", "4", "5", "6", "7", "8", "9")
 
 
 # Execute the selected program
 if selected in menu_options:
     menu_options[selected](br)
 
-    
 
 else:
     print("Invalid selection.")
