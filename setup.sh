@@ -19,7 +19,6 @@
       echo "⚠️  Not a git repository (no .git directory). Skipping git config."
   fi
 
-
 # Check if the virtual environment exists, if not, create it
 if [ ! -d ".venv" ]; then
     echo "Creating virtual environment..."
