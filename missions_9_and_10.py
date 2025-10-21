@@ -1,9 +1,11 @@
 from base_robot import *
 
+
+br = None
 # Robot starting position: Place robot at starting line, facing forward
 
 
-def Run(br: BaseRobot):
+def run(br: BaseRobot):
     """
     Execute the custom movement sequence
 
@@ -124,4 +126,4 @@ if __name__ == "__main__":
     print("Starting custom movement mission...")
     print("Press right button to begin")
     # br.waitForRightButton()
-    Run(br)
+    run(br)

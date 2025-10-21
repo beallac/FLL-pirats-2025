@@ -40,9 +40,11 @@ br = BaseRobot()
 import mission1_2
 import mission12
 import mission3
+import missions_9_and_10
 
 # Dictionary linking menu options to the run functions of each mission
 menu_options = {
+    "1": missions_9_and_10.run,
     "3": mission1_2.run,
     "4": mission12.run,
     "5": mission3.run,
