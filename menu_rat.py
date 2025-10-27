@@ -48,7 +48,7 @@ menu_options = {
     "1": missions_9_and_10.run,
     "2": completed_code_experimenting.run,
     "3": mission1_2.run,
-    "4": mission12.run,
+    "4": mission12.Run,
     "5": mission3.run,
 }
 
