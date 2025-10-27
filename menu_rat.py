@@ -41,12 +41,13 @@ import mission1_2
 import mission12
 import mission3
 import missions_9_and_10
+import completed_code_experimenting
 import emergency
-
 
 # Dictionary linking menu options to the run functions of each mission
 menu_options = {
     "1": missions_9_and_10.run,
+    "2": completed_code_experimenting.run,
     "3": mission1_2.run,
     "4": mission12.run,
     "5": mission3.run,
