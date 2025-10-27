@@ -2,7 +2,8 @@ from base_robot import *
 
 
 br = None
-# Robot starting position: Place robot at starting line, facing forward
+# Robot starting position: Place robot at east side, 2nd thicker black line from the left /..|...|[ROBOT], facing forward with
+# the correct attachemnt needed on front port. (The left side of the robot will be touching that line.)
 
 
 def run(br: BaseRobot):
