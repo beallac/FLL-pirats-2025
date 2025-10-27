@@ -41,6 +41,8 @@ import mission1_2
 import mission12
 import mission3
 import missions_9_and_10
+import emergency
+
 
 # Dictionary linking menu options to the run functions of each mission
 menu_options = {
@@ -48,6 +50,7 @@ menu_options = {
     "3": mission1_2.run,
     "4": mission12.run,
     "5": mission3.run,
+    "9": emergency.run,
 }
 
 import umath
