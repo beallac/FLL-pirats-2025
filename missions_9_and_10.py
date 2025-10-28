@@ -59,7 +59,7 @@ def run(br: BaseRobot):
     br.moveLeftAttachmentMotorForDegrees(degrees=-1500, speedPct=150, waiting=True)
 
     # Step 12:
-    print("Step 12: Spinning motor 1500 degrees down")
+    print("Step 12: Spinning motor 1500 degrees up")
     br.moveLeftAttachmentMotorForDegrees(degrees=1500, speedPct=150, waiting=True)
 
     # Step 13:
