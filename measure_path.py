@@ -1,18 +1,18 @@
 # MEASURE PATH TOOL
 # This utility script helps measure robot movements and alignment for mission planning.
-# 
+#
 # WHAT IT DOES:
 # - Continuously displays the robot's current heading (rotation angle) and distance traveled
 # - Automatically resets measurements when the robot stops moving
 # - Provides audio feedback (beep) when measurements are updated
-# 
+#
 # HOW TO USE:
 # 1. Place the robot at your starting position
 # 2. Run this script on the robot
 # 3. Push/drive the robot manually to measure distances and angles
 # 4. Press the BLUETOOTH button to reset measurements to zero at any time
 # 5. The hub will beep and display measurements when the robot stops moving
-# 
+#
 # USEFUL FOR:
 # - Measuring field distances for mission planning
 # - Checking robot alignment and heading accuracy
@@ -30,7 +30,9 @@ from pybricks.tools import wait
 from utils import TIRE_DIAMETER
 
 from base_robot import *
+
 br = BaseRobot()
+
 
 # Function to reset motors and IMU
 def reset_robot():
@@ -40,10 +42,12 @@ def reset_robot():
     br.robot.reset()
     print("IMU and motors reset to 0")
 
+
 # Function to print the current heading and stats
 def print_heading():
     heading = br.hub.imu.heading()
     print("Current heading:", round(heading, 1))
+
 
 def print_stats():
     heading = br.hub.imu.heading()
@@ -56,7 +60,8 @@ def print_stats():
     avg_distance = (left_distance + right_distance) / 2
 
     print("Heading: ", round(heading, 1))
-    print("Distance: ", round(avg_distance/10, 1))
+    print("Distance: ", round(avg_distance / 10, 1))
+
 
 # Initialize the reset at the start
 reset_robot()

@@ -94,9 +94,7 @@ class BaseRobot:
         self.hub = PrimeHub(top_side=Axis.Z, front_side=-Axis.Y)  # type: ignore
         print(version[2])
         if version[2] != CURRENT_PYBRICKS_VERSION:
-            print(
-                "* * * Expected Pybricks version " + CURRENT_PYBRICKS_VERSION
-            )
+            print("* * * Expected Pybricks version " + CURRENT_PYBRICKS_VERSION)
         v: int = self.hub.battery.voltage()
         vPct: int = RescaleBatteryVoltage(v)
         print(str(v))
@@ -268,9 +266,7 @@ class BaseRobot:
 
         """
         speed: int = RescaleMedMotSpeed(speedPct)
-        self.frontAttachmentMotor.run_time(
-            speed=speed, time=millis, wait=waiting
-        )
+        self.frontAttachmentMotor.run_time(speed=speed, time=millis, wait=waiting)
 
     def moveLeftAttachmentMotorUntilStalled(
         self,
@@ -374,9 +370,7 @@ class BaseRobot:
 
         """
         speed: int = RescaleMedMotSpeed(speedPct)
-        self.rearAttachmentMotor.run_time(
-            speed=speed, time=millis, wait=waiting
-        )
+        self.rearAttachmentMotor.run_time(speed=speed, time=millis, wait=waiting)
 
     def moveRightAttachmentMotorUntilStalled(
         self,

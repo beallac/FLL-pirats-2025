@@ -1,0 +1,42 @@
+from base_robot import *
+
+# Maze navigation script
+# Sequence:
+# 1. Drive 11 cm
+# 2. Turn -34 degrees
+# 3. Drive 36 cm
+# 4. Turn 72 degrees
+# 5. Drive 12.5 cm
+# 6. Turn -22.5 degrees
+# 7. Drive 2 cm
+# 8. Turn -50 degrees
+
+if __name__ == "__main__":
+    br = BaseRobot()
+    br.driveForDistance(
+        distance=110, speedPct=140, then=Stop.BRAKE, waiting=True
+    )  # 11 cm
+    br.turnInPlace(angle=-34, speedPct=120, waiting=True)  # -38 degrees
+    br.driveForDistance(
+        distance=360, speedPct=140, then=Stop.BRAKE, waiting=True
+    )  # 36 cm
+    br.turnInPlace(angle=65, speedPct=120, waiting=True)  # 72 degrees
+    br.driveForDistance(
+        distance=140, speedPct=140, then=Stop.BRAKE, waiting=True
+    )  # 14 cm
+
+    br.moveLeftAttachmentMotorForDegrees(degrees=-980, speedPct=120)  # Open claw
+
+    br.turnInPlace(angle=-22.5, speedPct=120, waiting=True)  # -31 degrees
+
+    # Drive forward 3.00 cm (30.0 mm) and turn -16 degrees
+br.driveForDistance(distance=40.0, speedPct=140, then=Stop.BRAKE, waiting=True)
+br.turnInPlace(angle=-25, speedPct=120, waiting=True)
+
+br.moveLeftAttachmentMotorForDegrees(degrees=980, speedPct=120)  # Close claw
+
+br.driveForDistance(distance=-400, speedPct=140, then=Stop.BRAKE, waiting=True)  # 80 cm
+
+br.turnInPlace(angle=-15, speedPct=120, waiting=True)
+
+br.driveForDistance(distance=-400, speedPct=140, then=Stop.BRAKE, waiting=True)  # 80 cm

@@ -9,25 +9,16 @@ from base_robot import *
 #
 # Robot Alignment: Place robot at desired starting position
 # No special arm positions or attachments needed
-
-br = None
-
-
-def run(base_robot):
-    global br
-    br = base_robot
-
+def Run(br: BaseRobot):
     br.driveForDistance(475)
     br.driveForDistance(-475)
-    br.moveLeftAttachmentMotorForMillis(millis=1500)
     br.turnInPlace(-90)
-    br.driveForDistance(90)
-    br.turnInPlace(90)
+    br.driveForDistance(95)
+    br.turnInPlace(90.5)
     br.driveForDistance(750)
     br.driveForDistance(-750)
-    br.moveLeftAttachmentMotorForMillis(millis=1575, speedPct=-80)
 
 
 if __name__ == "__main__":
     br = BaseRobot()
-    run(br)
+    Run(br)
