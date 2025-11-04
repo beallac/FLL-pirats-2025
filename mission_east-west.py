@@ -1,0 +1,42 @@
+from base_robot import *
+
+
+br = None
+
+
+def run(br: BaseRobot):
+    """
+    Execute the custom movement sequence
+
+    Args:
+        br (BaseRobot): The robot instance to control
+    """
+
+    br.driveForDistance(distance=25, speedPct=80, waiting=True)
+    br.turnInPlace(angle=-34.5, speedPct=45, waiting=True)
+    br.driveForDistance(distance=285, speedPct=80, waiting=True)
+    br.turnInPlace(angle=-20, speedPct=45, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=250, speedPct=150, waiting=True)
+    br.turnInPlace(angle=35, speedPct=45, waiting=True)
+    br.driveForDistance(distance=75, speedPct=80, waiting=True)
+
+    br.turnInPlace(angle=-35, speedPct=45, waiting=True)
+
+    br.driveForDistance(distance=110, speedPct=80, waiting=True)
+
+    br.moveLeftAttachmentMotorForDegrees(degrees=-550, speedPct=150, waiting=True)
+    br.turnInPlace(angle=-23.5, speedPct=45, waiting=True)
+    br.driveForDistance(distance=700, speedPct=80, waiting=True)
+    br.turnInPlace(angle=55, speedPct=45, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=300, speedPct=150, waiting=True)
+    br.turnInPlace(angle=-70, speedPct=45, waiting=True)
+    br.driveForDistance(distance=725, speedPct=80, waiting=True)
+
+
+# If running this file directly (for testing)
+if __name__ == "__main__":
+    br = BaseRobot()
+    print("Starting custom movement mission...")
+    print("Press right button to begin")
+    # br.waitForRightButton()
+    run(br)
