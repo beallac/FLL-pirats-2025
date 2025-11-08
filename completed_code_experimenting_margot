@@ -1,0 +1,61 @@
+from base_robot import *
+
+# Set br to None at the top (required for menu structure)
+br = None
+
+
+def run(base_robot):
+    """Mission 05-06-07 West - Main mission function"""
+    global br  # Tells Python we want to use the br defined at the top
+    br = base_robot  # Links the passed-in robot to br
+
+    br.driveForDistance(
+        distance=110, speedPct=80, then=Stop.BRAKE, waiting=True
+    )  # 11 cm
+    br.turnInPlace(angle=-34, speedPct=80, waiting=True)  # -38 degrees
+    br.driveForDistance(
+        distance=365, speedPct=80, then=Stop.BRAKE, waiting=True
+    )  # 36 cm
+    br.turnInPlace(angle=70, speedPct=80, waiting=True)  # 72 degrees
+    br.driveForDistance(
+        distance=142, speedPct=80, then=Stop.BRAKE, waiting=True
+    )  # 14 cm
+
+    br.moveLeftAttachmentMotorForDegrees(degrees=-922, speedPct=80)  # Open claw
+
+    br.turnInPlace(angle=-20, speedPct=80, waiting=True)  # -31 degrees
+
+    # Drive forward 3.00 cm (30.0 mm) and turn -16 degrees
+    br.driveForDistance(distance=46, speedPct=80, then=Stop.BRAKE, waiting=True)
+    br.turnInPlace(angle=-27, speedPct=60, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(
+        degrees=940, speedPct=60
+    )  # Raise so the mission is not undone
+    # Turn 21 degrees
+    br.turnInPlace(angle=23, speedPct=60, waiting=True)
+    # Drive 11 cm (110 mm)
+    br.driveForDistance(distance=110, speedPct=80, then=Stop.BRAKE, waiting=True)
+    # Turn 24 degrees
+    br.turnInPlace(angle=24, speedPct=60, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-940, speedPct=120)  # Open claw
+    br.driveForDistance(distance=40, speedPct=80, then=Stop.BRAKE, waiting=True)
+    # Turn 44 degrees
+    br.turnInPlace(angle=44, speedPct=80, waiting=True)
+
+    # Start going west
+    br.moveLeftAttachmentMotorForDegrees(degrees=900, speedPct=60)
+    br.driveForDistance(distance=-172, speedPct=80, then=Stop.BRAKE, waiting=True)
+    # This is when it turns away from Teo's Mission
+    br.turnInPlace(angle=-128, speedPct=80, waiting=True)
+    br.driveForDistance(distance=128, speedPct=80, then=Stop.BRAKE, waiting=True)
+    br.turnInPlace(angle=-50.2, speedPct=80, waiting=True)
+    br.driveForDistance(distance=1216, speedPct=80, then=Stop.BRAKE, waiting=True)
+    br.turnInPlace(
+        angle=-90, speedPct=80, waiting=True
+    )  # This is when it turns to the home
+    br.driveForDistance(distance=628, speedPct=80, then=Stop.BRAKE, waiting=True)
+
+
+if __name__ == "__main__":
+    br = BaseRobot()  # Create a robot instance to test with
+    run(br)  # Run your mission with your test instance

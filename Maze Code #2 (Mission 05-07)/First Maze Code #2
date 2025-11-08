@@ -1,0 +1,12 @@
+from base_robot import *
+
+if __name__ == "__main__":
+    br = BaseRobot()
+    # Turn 21 degrees
+    br.turnInPlace(angle=21, speedPct=50, waiting=True)
+    # Drive 11 cm (110 mm)
+    br.driveForDistance(distance=110, speedPct=80, then=Stop.BRAKE, waiting=True)
+    # Turn 24 degrees
+    br.turnInPlace(angle=24, speedPct=50, waiting=True)
+    # Turn 44 degrees
+    br.turnInPlace(angle=44, speedPct=50, waiting=True)

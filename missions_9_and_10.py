@@ -2,7 +2,8 @@ from base_robot import *
 
 
 br = None
-# Robot starting position: Place robot at starting line, facing forward
+# Robot starting position: Place robot at east side, 2nd thicker black line from the left /..|...|[ROBOT], facing forward with
+# the correct attachemnt needed on front port. (The left side of the robot will be touching that line.)
 
 
 def run(br: BaseRobot):
@@ -58,7 +59,7 @@ def run(br: BaseRobot):
     br.moveLeftAttachmentMotorForDegrees(degrees=-1500, speedPct=150, waiting=True)
 
     # Step 12:
-    print("Step 12: Spinning motor 1500 degrees down")
+    print("Step 12: Spinning motor 1500 degrees up")
     br.moveLeftAttachmentMotorForDegrees(degrees=1500, speedPct=150, waiting=True)
 
     # Step 13:
@@ -109,16 +110,27 @@ def run(br: BaseRobot):
     print("Step 24: Driving forward 70.0 cm")
     br.driveForDistance(distance=700, speedPct=80, waiting=True)
 
+    # =============================================== #
+    #  ._.  ._._____._.   ._.    ._____.              #
+    #  | |  | | ____| |   | |    /  _  \              #
+    #  | |--| | ._| | |   | |   |  | |  |             #
+    #  | |--| | |___| |___| |___|  |_|  |             #
+    #  |_|  |_|_____\_____\______\_____/              #
+    #                                                 #
+    #  ._______._.  ._._____.____.._____.             #
+    #  |__. .__| |  | | ____|  _ \| ____|             #
+    #     | |  | |--| |  _| | |_) |  _|               #
+    #     | |  | |--| | |___|  _ <| |___. .__.        #
+    #     |_|  |_|  |_|_____|_| |_|_____|  \ \        #
+    #                                      /_|        #
+    #  ._________.    .____.    ._.._____.______.._.  #
+    #  |_. ._. ._|    | ._.\    / \|_   _| .____|| |  #
+    #    | | | |      | |_) |  / _ \ | | | |____ |_|  #
+    #    | | | |_.    |  _ <  / ___ \| | |____  |._.  #
+    #    |_|  \__|    |_| \_\/_/   \_\_| |______||_|  #
+    #                                                 #
+    # =============================================== #
 
-#
-
-#
-
-#
-
-#
-
-#
 
 # If running this file directly (for testing)
 if __name__ == "__main__":
