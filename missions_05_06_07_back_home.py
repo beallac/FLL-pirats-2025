@@ -38,7 +38,7 @@ def run(base_robot):
     # Approach side of mission 07; drive 11 cm
     br.driveForDistance(distance=110, speedPct=80, then=Stop.BRAKE, waiting=True)
     # Turn to mission 07; turn 24 degrees
-    br.turnInPlace(angle=8, speedPct=60, waiting=True)
+    br.turnInPlace(angle=24, speedPct=60, waiting=True)
     # Lower claw by 940 degrees, getting the claw in position
     br.moveLeftAttachmentMotorForDegrees(degrees=-940, speedPct=120)
     # Slot the claw through mission 07; drive 4 cm
