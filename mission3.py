@@ -26,7 +26,11 @@ def run(base_robot):
     br.driveForDistance(distance=285, speedPct=80, then=Stop.BRAKE, waiting=True)
 
     # Step 4: Move front attachment left for 2 seconds
-    br.moveLeftAttachmentMotorForMillis(millis=2000, speedPct=80)
+    br.moveLeftAttachmentMotorForMillis(millis=3000, speedPct=80)
+
+    br.moveLeftAttachmentMotorForDegrees(degrees=-1200, speedPct=150, waiting=True)
+
+    br.driveForDistance(distance=-250, speedPct=80, then=Stop.BRAKE, waiting=True)
 
 
 if __name__ == "__main__":
