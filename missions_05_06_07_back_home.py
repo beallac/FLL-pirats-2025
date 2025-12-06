@@ -18,8 +18,7 @@ def run(base_robot):
     br.driveForDistance(distance=358, speedPct=80, then=Stop.BRAKE, waiting=True)
     # Turn to missions 05-07; turn 70 degrees
     br.turnInPlace(angle=70, speedPct=80, waiting=True)
-    br.moveLeftAttachmentMotorForDegrees(degrees=-900, speedPct=80)
-    br.moveLeftAttachmentMotorForDegrees(degrees=334, speedPct=80)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-566, speedPct=80)
     # Drive to missions 05-07; drive 14.2 cm
     br.driveForDistance(distance=142, speedPct=80, then=Stop.BRAKE, waiting=True)
 
