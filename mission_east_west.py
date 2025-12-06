@@ -19,7 +19,7 @@ def run(br: BaseRobot):
     br.moveLeftAttachmentMotorForDegrees(degrees=-150, speedPct=150, waiting=True)
     br.leftDriveMotor.run_angle(rotation_angle=-130, speed=500, wait=True)
     br.driveForDistance(distance=750, speedPct=80, waiting=True)
-    br.turnInPlace(angle=50, speedPct=45, waiting=True)
+    br.turnInPlace(angle=60, speedPct=45, waiting=True)
     br.moveLeftAttachmentMotorForDegrees(degrees=270, speedPct=150, waiting=True)
     br.turnInPlace(angle=-72, speedPct=45, waiting=True)
     br.driveForDistance(distance=800, speedPct=80, waiting=True)
