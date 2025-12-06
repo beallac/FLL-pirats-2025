@@ -12,7 +12,7 @@ def run(br: BaseRobot):
         br (BaseRobot): The robot instance to control
     """
 
-    br.moveLeftAttachmentMotorForDegrees(degrees=150, speedPct=150, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=120, speedPct=150, waiting=True)
     br.driveForDistance(distance=25, speedPct=80, waiting=True)
     br.turnInPlace(angle=-50, speedPct=45, waiting=True)
     br.driveForDistance(distance=400, speedPct=80, waiting=True)
