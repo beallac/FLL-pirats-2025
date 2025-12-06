@@ -31,7 +31,7 @@ def run(br: BaseRobot):
     br.turnInPlace(angle=60, speedPct=45, waiting=True)
     br.driveForDistance(distance=110, speedPct=80, waiting=True)
     br.turnInPlace(angle=-85, speedPct=45, waiting=True)
-    br.driveForDistance(distance=90, speedPct=80, waiting=True)
+    br.driveForDistance(distance=80, speedPct=80, waiting=True)
     br.turnInPlace(angle=-85, speedPct=45, waiting=True)
     br.driveForDistance(distance=130, speedPct=80, waiting=True)
     br.driveForDistance(distance=-130, speedPct=80, waiting=True)
@@ -39,7 +39,7 @@ def run(br: BaseRobot):
     br.driveForDistance(distance=200, speedPct=80, waiting=True)
     br.turnInPlace(angle=45, speedPct=45, waiting=True)  # Negative for left turn
     br.driveForDistance(distance=700, speedPct=80, waiting=True)
-    br.moveLeftAttachmentMotorForDegrees(degrees=-1500, speedPct=150, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-1270, speedPct=150, waiting=True)
 
     # =============================================== #
     #  ._.  ._._____._.   ._.    ._____.              #
