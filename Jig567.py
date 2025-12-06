@@ -9,7 +9,7 @@ def run(base_robot):
     global br  # Tells Python we want to use the br defined at the top
     br = base_robot  # Links the passed-in robot to br
 
-    br.moveLeftAttachmentMotorForDegrees(degrees=900, speedPct=80)
+    br.moveLeftAttachmentMotorForDegrees(degrees=625, speedPct=80)
     # Leave starting point; drive 11 cm
     br.driveForDistance(distance=110, speedPct=80, then=Stop.BRAKE, waiting=True)
     # Turn to mission 09; turn -34 degrees
@@ -52,7 +52,7 @@ def run(base_robot):
     br.turnInPlace(angle=-110, speedPct=80, waiting=True)
     # Drive to home; drive -92 cm
     br.driveForDistance(distance=-920, speedPct=80, then=Stop.BRAKE, waiting=True)
-    br.moveLeftAttachmentMotorForDegrees(degrees=-1280, speedPct=120)
+    br.moveLeftAttachmentMotorForDegrees(degrees=-1060, speedPct=120)
 
 
 if __name__ == "__main__":
