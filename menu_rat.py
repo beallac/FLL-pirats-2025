@@ -44,15 +44,17 @@ import mission3
 import missions_9_and_10
 import emergency
 import mission_east_west
+import raise_arm
 
 # Dictionary linking menu options to the run functions of each mission
 menu_options = {
     "1": missions_9_and_10.run,
-    "2": missions_05_06_07_back_home.run,
-    "3": mission_east_west.run,
-    "4": mission1_2.run,
-    "5": mission12.run,
-    "6": mission3.run,
+    "2": raise_arm.run,
+    "3": missions_05_06_07_back_home.run,
+    "4": mission_east_west.run,
+    "5": mission1_2.run,
+    "6": mission12.run,
+    "7": mission3.run,
     "9": emergency.run,
 }
 
