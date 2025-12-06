@@ -53,7 +53,7 @@ menu_options = {
     "3": missions_05_06_07_back_home.run,
     "4": mission_east_west.run,
     "5": mission1_2.run,
-    "6": mission12.run,
+    "6": mission12.Run,
     "7": mission3.run,
     "9": emergency.run,
 }
