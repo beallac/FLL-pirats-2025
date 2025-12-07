@@ -22,7 +22,7 @@ def run(base_robot):
     br.driveForDistance(distance=142, speedPct=80, then=Stop.BRAKE, waiting=True)
 
     # Release ores (complete mission 06); turn -20 degrees
-    br.turnInPlace(angle=-20, speedPct=80, waiting=True)
+    br.turnInPlace(angle=-20, speedPct=20, waiting=True)
 
     br.moveLeftAttachmentMotorForDegrees(degrees=-12, speedPct=80)
     # Approach mission 05; drive 4.6 cm

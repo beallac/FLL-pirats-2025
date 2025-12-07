@@ -12,9 +12,9 @@ def run(br: BaseRobot):
         br (BaseRobot): The robot instance to control
     """
 
-    br.moveLeftAttachmentMotorForDegrees(degrees=170, speedPct=150, waiting=True)
+    br.moveLeftAttachmentMotorForDegrees(degrees=150, speedPct=150, waiting=True)
     br.driveForDistance(distance=25, speedPct=80, waiting=True)
-    br.turnInPlace(angle=-32.5, speedPct=45, waiting=True)
+    br.turnInPlace(angle=-31, speedPct=45, waiting=True)
     br.driveForDistance(distance=250, speedPct=80, waiting=True)
     br.turnInPlace(angle=-20, speedPct=45, waiting=True)
     br.turnInPlace(angle=25, speedPct=45, waiting=True)
@@ -24,7 +24,7 @@ def run(br: BaseRobot):
     br.driveForDistance(distance=460, speedPct=80, waiting=True)
     br.turnInPlace(angle=-90, speedPct=45, waiting=True)
     br.driveForDistance(distance=180, speedPct=80, waiting=True)
-    br.turnInPlace(angle=-20, speedPct=45, waiting=True)
+    br.turnInPlace(angle=-18, speedPct=45, waiting=True)
     br.moveLeftAttachmentMotorForDegrees(degrees=-1500, speedPct=150, waiting=True)
     br.moveLeftAttachmentMotorForDegrees(degrees=1500, speedPct=150, waiting=True)
     br.driveForDistance(distance=-25, speedPct=80, waiting=True)
@@ -32,7 +32,7 @@ def run(br: BaseRobot):
     br.driveForDistance(distance=110, speedPct=80, waiting=True)
     br.turnInPlace(angle=-85, speedPct=45, waiting=True)
     br.driveForDistance(distance=105, speedPct=80, waiting=True)
-    br.turnInPlace(angle=-89, speedPct=45, waiting=True)
+    br.turnInPlace(angle=-90, speedPct=45, waiting=True)
     br.driveForDistance(distance=190, speedPct=80, waiting=True)
     br.driveForDistance(distance=-190, speedPct=80, waiting=True)
     br.turnInPlace(angle=-40, speedPct=45, waiting=True)
