@@ -9,7 +9,7 @@ def run(base_robot):
     global br  # Tells Python we want to use the br defined at the top
     br = base_robot  # Links the passed-in robot to br
 
-    br.moveLeftAttachmentMotorForDegrees(degrees=900, speedPct=80)
+    br.moveLeftAttachmentMotorForDegrees(degrees=860, speedPct=80)
 
 
 if __name__ == "__main__":
